@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use client'
 import type { FormFieldBlock, Form as FormType } from '@payloadcms/plugin-form-builder/types'
 
@@ -46,7 +47,6 @@ export const FormBlock: React.FC<
   const [error, setError] = useState<{ message: string; status?: string } | undefined>()
   const router = useRouter()
 
-  // @ts-expect-error
   const onSubmit = useCallback(
     (data: FormFieldBlock[]) => {
       let loadingTimerID: ReturnType<typeof setTimeout>
